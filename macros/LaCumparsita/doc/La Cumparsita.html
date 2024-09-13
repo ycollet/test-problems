@@ -1,0 +1,375 @@
+<html><head>
+
+
+<link rel="stylesheet" href="La%20Cumparsita_fichiers/index.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>La Cumparsita</title></head><body>
+
+<h1>LA CUMPARSITA</h1>
+<h3>The TANGO Project collection of nonlinear programming test problems</h3>
+
+The problems in this collection are geometrically meaningful. They can
+be described "in words". The dimensions are variable. Constraints are
+always present. Fortran 77 codes with functions and at least first
+derivatives are available.
+
+<h3>Instructions:</h3> 
+
+Choose a problem from the list below. Download the problem and also
+download the method <a href="http://www.ime.usp.br/%7Eegbirgin/tango/codes.php#algencan">ALGENCAN</a> from the <a href="http://www.ime.usp.br/%7Eegbirgin/tango/">TANGO Project</a> home page (files
+algencanma.f and algencan.f). Compile both together typing <p class="TERM">g77 -O4 -xf77-cpp-input algencanma.f algencan.f
+problem-name.f -o algencanma</p> (where "problem-name.f" is the file
+name of the problem you selected) and run it typing <p class="TERM">algencanma</p>
+
+<p>More detailed descriptions can be found within the problems code.</p>
+
+  <table class="probs"><thead>
+      <tr class="probs">
+        <th class="probs">Problem name and subroutine</th>
+        <th class="probs">Description</th>
+        <th class="probs">Graphical representation</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr class="probs">  
+        <td class="probs">America <br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/america.f">america.f</a> </td>
+        <td class="descr">The objective is to draw a map of America in 
+                          which the countries appear with areas that are 
+                          proportional to their real values. 
+                          <font color="green">[M, 2000]</font></td>
+        <td class="probs"><img src="La%20Cumparsita_fichiers/america.gif"></td>
+      </tr>
+   
+      <tr class="probs">  
+        <td class="probs">Hard spheres <br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/hardspheres.f">hardspheres.f</a>
+			  <br> (See also the associated Kissing Number problem
+			  modeled as a feasibility problem in
+			  two different ways <a href="http://www.ime.usp.br/%7Eegbirgin/collection/kissing.f">kissing.f</a>
+			  <a href="http://www.ime.usp.br/%7Eegbirgin/collection/kissing2.f">kissing2.f</a>)
+                          </td>
+
+	<td class="descr">The Hard-Spheres Problem
+			  is to maximize the minimum pairwise distance
+			  between npun points on a sphere in
+			  R^ndim. <font color="green">
+                          [CS, 1999]</font></td> 
+
+        <td class="probs"><img src="La%20Cumparsita_fichiers/hardspheres.gif"></td> </tr>
+   
+      <tr class="probs">  
+        <td class="probs">Hard cube <br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/hardcube.f">hardcube.f</a> </td>
+        <td class="descr">We consider the cube [-1,1]^{ndim} intersected 
+                          with the complement of the unitary sphere. We 
+                          want to find npun points in this set such that 
+                          the minimum distance between them is maximal. </td>
+        <td class="probs"><img src="La%20Cumparsita_fichiers/hardcube.gif"></td>
+      </tr>
+   
+      <tr class="probs">  
+        <td class="probs">Smallest enclosing ellipsoid
+                          centered at the origin <br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/ellipsoid.f">ellipsoid.f</a> <br>
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/ellipsoid.dat">ellipsoid.dat</a> </td>
+        <td class="descr">Given npun fixed points in R^ndim, minimize 
+                          the volume of the ellipsoid, centered at the 
+                          origin, that fits them. Points can be generated 
+                          using the Cauchy distribution or given by the user.
+                          <font color="green">[TY, 2006]</font>
+                          
+                          <p>The figure shows the smallest encolsing ellipsoid 
+                          centered at the origin when considering the two 
+                          first coordinates of 4278 points in R^3 representing 
+                          the atoms of a protein of the Isoform alpha of the 
+                          Thyroid Hormone Receptor. </p></td>
+        <td class="probs"><img src="La%20Cumparsita_fichiers/ellipsoid.gif"></td>
+      </tr>
+   
+      <tr class="probs">  
+        <td class="probs">Location problem <br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/location.f">location.f</a> </td>
+        
+        <td class="descr">This is a variant of the family of location
+                          problems introduced in <font color="green">[BMR, 2001]</font>.
+                          In the original problem, given a set of np
+                          disjoint polygons P1, P2, ..., Pnp in R^2
+                          one wishes to find the point z1 in P1 that
+                          minimizes the sum of the distances to the
+                          other polygons. 
+
+                          <p>In this variant we have, in addition to 
+                          the np polygons, nc
+                          circles.  Moreover, there is an ellipse
+                          which has a non empty intersection with P1
+                          and such that z1 must be inside the ellipse
+                          and zi, i = 2, ..., np+nc must be outside.
+                          The detailed formulation can be found in
+                          <font color="green">[ABMS, 2005]</font>. 
+                          
+                          </p><p>Here you can find the scripts to run <a href="http://www.ime.usp.br/%7Eegbirgin/tango/">ALGENCAN</a> (<a href="http://www.ime.usp.br/%7Eegbirgin/collection/runlocation-algencan">runlocation-algencan</a>)
+                          and <a href="http://www.ime.usp.br/%7Eegbirgin/sources/alspg/">ALSPG</a>
+                          (<a href="http://www.ime.usp.br/%7Eegbirgin/sources/alspg/location/runlocation-alspg">
+                          runlocation-alspg</a>) in a set of small
+                          problems.  <a href="http://www.ime.usp.br/%7Eegbirgin/sources/alspg/">ALSPG</a>
+                          can also solve a set of very large problems
+                          (<a href="http://www.ime.usp.br/%7Eegbirgin/sources/alspg/location/runlocation-alspg-2">
+                          runlocation-alspg-2</a>). See in the scripts
+                          the suggested input data to reproduce the
+                          numerical examples presented in <font color="green">[ABMS, 2005]</font>. Last
+                          but not least, here you can find the
+                          ready-to-use version of <a href="http://www.ime.usp.br/%7Eegbirgin/sources/alspg/location/">
+                          <font color="red">ALSPG to solve the
+                          location problem</font></a>.</p></td>
+
+        <td class="probs"><img src="La%20Cumparsita_fichiers/location.gif"></td>
+      </tr>
+   
+      <tr class="probs">  
+        <td class="probs">Nonlinear second-order one-dimensional 
+                          problem with observed points <br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/condor.f">condor.f</a> </td>
+        <td class="descr">We generate (using subroutine evalu) a function 
+                          called usol as a Fourier polynomial with up to 
+                          q = 20 terms. A grid in [0, 2 pi] with up to 1000 
+                          points is established. We generate function fi(t) 
+                          in such a way that usol is a solution of the 
+                          discretization of the differential equation 
+                          u''(t) + [u'(t)]^2 + u(t) = fi(t). We select up to 
+                          1000 observation points equally spaced in [-2, 18] 
+                          and observe the solution usol at these observation 
+                          points, obtaining the observed solution uobs. Finally, 
+                          uint, the interpolation of uobs in the grid points is 
+                          computed. The optimization problem is to obtain the 
+                          solution of the discretized differential equation 
+                          which is closest, in the least-squares sense, to uint. 
+                          Instances with q = 20, 500 observation points and 1000 
+                          grid points are challenging. </td>
+        <td class="probs"><img src="La%20Cumparsita_fichiers/condor.gif"></td>
+      </tr>
+   
+      <tr class="probs">  
+        <td class="probs">Piecefit: a novel application of OVO <br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/piecefit.f">piecefit.f</a> </td>
+        <td class="descr">We defined usol, a piecewise linear function defined 
+                          on [0,4] with	kinks in 1 and 3 and discotinuity in 2. 
+                          We discretized [0,4] with n points, including extremes. 
+                          We defined uobs, a 10% perturbation of usol. The 
+                          objective function is the sum of the p smaller squares 
+                          of the discretized second derivatives of x. p, the OVO 
+                          parameter, is given by the user. The restriction is that 
+                          the root mean squared	deviation of the solution found 
+                          with respect to uobs is smaller than 0.2. In other words, 
+                          using LOVO, this code aims to find a piecewise harmonic 
+                          one-dimensional function. </td>
+        <td class="probs"><img src="La%20Cumparsita_fichiers/piecefit.gif"></td>
+      </tr>
+   
+      <tr class="probs">  
+        <td class="probs">Fit a continuous piecewise polynomial <br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/pedazos4.f">pedazos4.f</a> </td>
+        <td class="descr">We generate a table (t_i, y_i) with 30 equally spaced 
+                          points between 1 and 30. The first 10 points are on a 
+                          line, the second 10 on a parabola and the third 10 on 
+                          a cubic. The points are 10% perturbed The overall 
+                          function is continuous at 10 and 20. We fit a line to 
+                          the first 10, a quadratic to the second 10 and a cubic 
+                          to the third ten, with the conditions that we preserve 
+                          continuity at 10 and 20. So, we have 9 unknowns and 2 
+                          equality constraints. The objective function is quadratic 
+                          and the constraints are linear. </td>
+        <td class="probs"><img src="La%20Cumparsita_fichiers/pedazos4.gif"></td>
+      </tr>
+    </tbody>
+   
+      <tbody><tr class="probs">  
+        <td class="probs">Pass mountain <br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/mountain1.f">mountain1.f</a> <br>
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/mountain2.f">mountain2.f</a> </td>
+        <td class="descr">Given a surface S(x,y) and initial and final 
+                          points pi, pf in R^2 the problem consists on 
+                          finding a path pi, p1, p2, ..., pN, pf from pi 
+                          to pf such that max_{1 &lt;= k &lt;= N} S(pk) is as 
+                          small as possible. Moreover, the distance between 
+                          consecutive points in the path must be less than 
+                          or equal to a prescribed tolerance. The problem 
+                          has n = 2 N + 1 variables and m = 2 N + 1 inequality 
+                          constraints, where N is the number of intermediate 
+                          points in the path. The considered surfaces are: 
+                          S(x,y) = sin( x * y ) + sin( x + y ) and S(x,y) = 
+                          sin(x) + cos(y). <font color="green">[H, 2004], 
+                          [MM, 2004]</font></td>
+        <td class="probs"><img src="La%20Cumparsita_fichiers/mountain.gif"></td>
+      </tr>
+   
+      <tr class="probs">  
+        <td class="probs">Packing of circles within a circle <br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/packccmn.f">packccmn.f</a> <br>
+			  (modeled as a feasibility problem
+			  <a href="http://www.ime.usp.br/%7Eegbirgin/collection/packccmn-feas.f">packccmn-feas.f</a>)</td>
+        <td class="descr">We wish to fit a fixed number of different-sized
+                          circular items within a circular object of radius R 
+                          in such a way that the circular items do not overlap. 
+                          <font color="green">[BMR, 2005]</font></td>
+        <td class="probs"><img src="La%20Cumparsita_fichiers/packccmn.gif"></td>
+      </tr>
+   
+      <tr class="probs">  
+        <td class="probs">Packing of circles within a rectangle <br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/packcrmn-feas.f">packcrmn-feas.f</a> </td>
+        <td class="descr">We wish to fit a fixed number of different-sized
+                          circular items within a rectangular object of
+                          dimension L x W in such a way that the circular
+                          items do not overlap. In fact, the problem is
+			  coded for any arbitrary dimension. Therefore, it
+			  can also be used to fit spheres within a cuboid.
+                          <font color="green">[BMR, 2005]</font></td>
+        <td class="probs"><font color="grey">No image available.</font></td>
+      </tr>
+   
+      <tr class="probs">  
+        <td class="probs">Fix expiration dates for a content network location 
+                          cache problem <br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/cache.f">cache.f</a> <br>
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/cache.dat">cache.dat</a> </td>
+        <td class="descr">Mathematical programming model for fixing content location 
+                          cache	expiration dates at aggregation nodes in a content 
+                          network, in order to maximize the information discovered by 
+                          the nodes of the networks, while taking into account 
+                          bandwidth constraints at the aggregation nodes. </td>
+        <td class="probs"><font color="grey">No image available.</font></td>
+      </tr>
+   
+      <tr class="probs">  
+        <td class="probs">Contour I <br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/contor.f">contor.f</a> </td>
+        <td class="descr">Find the solution of the differential equation y'' = sin(y) 
+                          which is closest to a set of given data points. The data 
+                          (ti, yi) are such that yi is a 10 percent random perturbation 
+                          of a true discrete solution. The true discrete solution is 
+                          such that y(0)=y'(0)=1. </td>
+        <td class="probs"><font color="grey">No image available.</font></td>
+      </tr>
+   
+      <tr class="probs">  
+        <td class="probs">Contour II <br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/contor2.f">contor2.f</a> </td>
+        <td class="descr">Find the solution of the differential equation 
+                          y'' = a y^2 + b y + c which is closest to a set of given 
+                          data points, considering y, a, b and c as unknowns. The 
+                          data (ti, yi) are such that yi is a random [-1,1] 
+                          perturbation of a true discrete solution. The true discrete 
+                          solution is such that y(0) = y'(0) = 1. </td>
+        <td class="probs"><font color="grey">No image available.</font></td>
+      </tr>
+   
+      <tr class="probs">  
+        <td class="probs">Simulation of Hartree-Fock <br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/simfock.f">simfock.f</a> </td>
+        <td class="descr">Given kdim and ndim satisfying ndim &lt;= kdim, the 
+                          problem is to minimize 0.5 x^T A x + b^T x subject to 
+                          mat(x) mat(x) = mat(x), trace[mat(x)] = ndim, and 
+                          mat(x) = mat(x)^T, where, n = kdim^2, x in R^n, and we 
+                          define mat(x) in R^{kdim x kdim} as the matrix whose 
+                          columnwise representation is x. Therefore, the problem 
+                          has kdim^2 variables, kdim^2 nonlinear equality constraints 
+                          and kdim * ( kdim - 1 ) / 2 + 1 linear equality 
+                          constraints. </td>
+        <td class="probs"><font color="grey">No image available.</font></td>
+      </tr>
+   
+      <tr class="probs">  
+        <td class="probs">Simulation of Hartree-Fock II <br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/simfock2.f">simfock2.f</a> </td>
+        <td class="descr">This a different formulation of the problem above.
+                          Given kdim and ndim satisfying ndim &lt;= kdim, the problem 
+                          is to minimize 0.5 x^T A x + b^T x subject to M orthonornal,
+                          where x is the columnwise representation of the matrix 
+                          X = M M^T, and M in R^{kdim x ndim}. Therefore, the problem 
+                          has ndim * kdim variables (the elements of matrix M) and ndim 
+                          + ndim * ( ndim - 1 ) / 2 nonlinear equality constraints. </td>
+        <td class="probs"><font color="grey">No image available.</font></td>
+      </tr>
+   
+   
+      <tr class="probs">  
+        <td class="probs">Bratu<br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/bratu3Db.f">bratu3Db.f</a> </td>
+        <td class="descr">3D Boundary Value problem with known solution. 
+	                  <font color="green">[ABMS, 2005]</font></td>
+        <td class="probs"><font color="grey">No image available.</font></td>
+      </tr>
+   
+      <tr class="probs">  
+        <td class="probs">Packing of circular items within a circle minimizing its 
+                          area (or perimeter) <br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/genpack-cc-mina.f"> genpack-cc-mina.f</a> </td>
+        <td class="descr">Given a fixed number of fixed-size identical circles (called 
+                          items), the objective is to find the smallest circle that fits 
+                          the items without overlapping.
+                          <font color="green">[BS, 2006]</font> </td>
+        <td class="probs"><img src="La%20Cumparsita_fichiers/cc-mina.gif"></td>
+      </tr>
+   
+      <tr class="probs">  
+        <td class="probs">Packing of circular items within a square minimizing its 
+                          area (or perimeter) <br> 
+                          <a href="http://www.ime.usp.br/%7Eegbirgin/collection/genpack-csq-mina.f"> genpack-csq-mina.f</a> </td>
+        <td class="descr">Given a fixed number of fixed-size identical circles (called 
+                          items), the objective is to find the smallest square that fits 
+                          the items without overlapping. 
+                          <font color="green">[BS, 2006]</font> </td>
+        <td class="probs"><img src="La%20Cumparsita_fichiers/csq-mina.gif"></td>
+      </tr>
+    </tbody>
+  </table>
+
+<h3>References:</h3>
+<ul type="circle">
+
+<li><b>[ABMS, 2005]</b> R. Andreani, E. G. Birgin, J. M. Martínez and
+M. L. Schuverdt, On Augmented Lagrangian methods with general
+lower-level constraints, submitted, 2005.
+
+</li><li><b>[BMR, 2005]</b> E. G. Birgin, J. M. Martínez and D. P. Ronconi,
+Optimizing the Packing of Cylinders into a Rectangular Container: A
+Nonlinear Approach, <i>European Journal of Operational Research</i>
+160, pp. 19-33, 2005.
+
+</li><li><b>[BMR, 2001]</b> E. G. Birgin, J. M. Martínez and M. Raydan,
+Algorithm 813: SPG - software for convex-constrained optimization,
+<i>ACM Transactions on Mathematical Software</i> 27, pp. 340-349,
+2001.
+
+</li><li><b>[BS, 2006]</b> E. G. Birgin and F. N. C. Sobral, Minimizing the
+object dimensions in circle and sphere packing problems, to appear in
+<i>Computers &amp; Operations Research</i>, 2006.
+
+</li><li><b>[CS, 1999]</b> J. H. Conway and N. J. A. Sloane,
+<i>Sphere Packings, Lattices and Groups</i>, 3rd ed., New York,
+Springer-Verlag, 1999.
+
+</li><li><b>[H, 2004]</b> J. Horák, Constrained mountain pass algorithm for
+the numerical solution of semilinear elliptic problems,
+<i>Numerische Mathematik</i> 98, pp. 251-276, 2004.
+
+</li><li><b>[M, 2000]</b> J. M. Martínez, BOX-QUACAN and the implementation
+of Augmented Lagrangian algorithms for minimization with inequality
+constraints, <i> Computational and Applied Mathematics</i> 19,
+pp. 31-56, 2000.
+
+</li><li><b>[MM, 2004]</b> J. J. Moré and T. S. Munson, Computing mountain
+passes and transition states, <i>Mathematical Programming</i> 100,
+pp. 151-182, 2004.
+
+</li><li><b>[TY, 2006]</b> M. J. Todd and E.A. Yildirim, On Khachiyan's
+algorithm for the computation of minimum volume enclosing ellipsoids,
+(9/05).
+
+</li></ul>
+<p></p>
+
+<p align="right"><font size="-1">Last edited: November 7, 2006.</font></p>
+
+</body></html>

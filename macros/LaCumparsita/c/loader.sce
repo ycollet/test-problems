@@ -1,0 +1,9 @@
+addinter('./sci_lacumparsita.so','interface_inip','inip');
+addinter('./sci_lacumparsita.so','interface_evalf','evalf');
+addinter('./sci_lacumparsita.so','interface_evalg','evalg');
+addinter('./sci_lacumparsita.so','interface_evalh','evalh');
+addinter('./sci_lacumparsita.so','interface_evalc','evalc');
+addinter('./sci_lacumparsita.so','interface_evaljac','evaljac');
+addinter('./sci_lacumparsita.so','interface_evalhc','evalhc');
+addinter('./sci_lacumparsita.so','interface_evalhlp','evalhlp');
+addinter('./sci_lacumparsita.so','interface_endp','endp');
